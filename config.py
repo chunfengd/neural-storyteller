@@ -48,7 +48,7 @@ def init(model_cache_path):
     paths['vsemodel'] = '{}/coco_embedding.npz'.format(path)
     # VGG-19 convnet
     paths['vgg'] = '{}/vgg19.pkl'.format(path)
-    paths['pycaffe'] = '/opt/caffe/python'
+    paths['pycaffe'] = '/usr/local/caffe/python'
     paths['vgg_proto_caffe'] = '{}/VGG_ILSVRC_19_layers_deploy.prototxt'.format(path)
     paths['vgg_model_caffe'] = '{}/VGG_ILSVRC_19_layers.caffemodel'.format(path)
     # COCO training captions
