@@ -29,7 +29,6 @@ paths['pycaffe'] = '/u/yukun/Projects/caffe-run/python'
 paths['vgg_proto_caffe'] = '/ais/guppy9/movie2text/neural-storyteller/models/VGG_ILSVRC_19_layers_deploy.prototxt'
 paths['vgg_model_caffe'] = '/ais/guppy9/movie2text/neural-storyteller/models/VGG_ILSVRC_19_layers.caffemodel'
 
-
 # COCO training captions
 paths['captions'] = '/ais/gobi3/u/rkiros/storyteller/coco_train_caps.txt'
 
@@ -49,7 +48,7 @@ def init(model_cache_path):
     paths['vsemodel'] = '{}/coco_embedding.npz'.format(path)
     # VGG-19 convnet
     paths['vgg'] = '{}/vgg19.pkl'.format(path)
-    paths['pycaffe'] = '/u/yukun/Projects/caffe-run/python'
+    paths['pycaffe'] = '/opt/caffe/python'
     paths['vgg_proto_caffe'] = '{}/VGG_ILSVRC_19_layers_deploy.prototxt'.format(path)
     paths['vgg_model_caffe'] = '{}/VGG_ILSVRC_19_layers.caffemodel'.format(path)
     # COCO training captions
