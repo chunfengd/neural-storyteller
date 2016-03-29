@@ -10,6 +10,8 @@ if __name__ == '__main__':
     parser.add_argument('--input', help = 'input file')
     args = parser.parse_args()
 
+    print args
+
     if args.type == 'inference':
         config.init(args.model_cache_path)
         z = generate.load_all()
