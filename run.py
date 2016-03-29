@@ -16,5 +16,5 @@ if __name__ == '__main__':
         s = generate.store(z, args.input)
         output_file = '/data/output/{}.txt'.format(str(int(time.time())));
         with open(output_file, "w") as f:
-            f.write(output_fiile, s)
+            f.write('result:\n{}'.format(s))
         print output_file
