@@ -1,4 +1,4 @@
-import sys
+import sys,time
 import argparse
 import config
 import generate
@@ -14,4 +14,7 @@ if __name__ == '__main__':
         config.init(args.model_cache_path)
         z = generate.load_all()
         s = generate.store(z, args.input)
-        print s
+        output_file = '/data/output/{}.txt'.format(str(int(time.time())));
+        with open(output_file, "w") as f:
+            f.write(output_fiile, s)
+        print output_file
