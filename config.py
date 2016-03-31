@@ -36,7 +36,7 @@ paths['captions'] = '/ais/gobi3/u/rkiros/storyteller/coco_train_caps.txt'
 paths['negbias'] = '/ais/gobi3/u/rkiros/storyteller/caption_style.npy'
 paths['posbias'] = '/ais/gobi3/u/rkiros/storyteller/romance_style.npy'
 
-def init(model_cache_path):
+def init(path):
     global paths
     # skip-thoughts
     paths['skmodels'] = '{}/skip-thoughts/'.format(path)
@@ -55,4 +55,4 @@ def init(model_cache_path):
     paths['captions'] = '{}/coco_train_caps.txt'.format(path)
     # Biases
     paths['negbias'] = '{}/caption_style.npy'.format(path)
-    paths['posbias'] = '{}/romance_style.npy'.format(paht)
+    paths['posbias'] = '{}/romance_style.npy'.format(path)
