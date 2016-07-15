@@ -8,6 +8,8 @@ if __name__ == '__main__':
     parser.add_argument('--model_cache_path', help = 'model cache path')
     parser.add_argument('--type', help = 'train or inference',default='inference')
     parser.add_argument('--input', help = 'input file')
+    parser.add_argument('--condition_count', type=int,default=100)
+    parser.add_argument('--beamwidth', type=int,default=50)
     args = parser.parse_args()
 
     print args
@@ -15,7 +17,7 @@ if __name__ == '__main__':
     if args.type == 'inference':
         config.init(args.model_cache_path)
         z = generate.load_all()
-        s = generate.story(z, args.input)
+        s = generate.story(z, args.input,k=args.condition_count,bw=args.beamwidth)
         output_file = '/data/output/{}.txt'.format(str(int(time.time())));
         with open(output_file, "w") as f:
             f.write('{}'.format(s))
