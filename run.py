@@ -17,8 +17,8 @@ if __name__ == '__main__':
     if args.type == 'inference':
         config.init(args.model_cache_path)
         z = generate.load_all()
-        #s = generate.story(z, args.input,k=args.condition_count,bw=args.beamwidth)
-        s = generate.story(z, args.input)
+        s = generate.story(z, args.input,args.condition_count,args.beamwidth)
+        #s = generate.story(z, args.input)
         output_file = '/data/output/{}.txt'.format(str(int(time.time())));
         with open(output_file, "w") as f:
             f.write('{}'.format(s))
