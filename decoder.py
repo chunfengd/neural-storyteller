@@ -65,7 +65,14 @@ def run_sampler(dec, c, beam_width=1, stochastic=False, use_unk=False):
     if stochastic:
         sample = [sample]
     for c in sample:
-        text.append(' '.join([dec['word_idict'][w] for w in c[:-1]]))
+        foos = []
+        for w in c[:-1]:
+            #foo = dec['word_idict'][w] #for w in c[:-1]
+            if w in dec['word_idict']:
+              foos.append(dec['word_idict'][w])
+        chars = ' '.join(foos)
+        text.append(chars)
+        #text.append(' '.join([dec['word_idict'][w] for w in c[:-1]]))
 
     #Sort beams by their NLL, return the best result
     lengths = numpy.array([len(s.split()) for s in text])
